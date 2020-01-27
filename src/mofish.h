@@ -14,4 +14,4 @@
 API double add(int f1, int f2);
 API double mul(int f1, int f2);
 
-#endif //CLI_MOFISH_H
+#endif  // CLI_MOFISH_H
