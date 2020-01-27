@@ -40,7 +40,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
+      - uses: actions/setup-python@master
+        with:
+          python-version: 3.x
 
+      - name: Init
+        run: git submodule update --init
       - name: Download Ninja and CMake
         id: cmake_and_ninja
         shell: cmake -P {0}
@@ -183,3 +188,5 @@ jobs:
           if (NOT result EQUAL 0)
             message(FATAL_ERROR "Running tests failed!")
           endif()
+      - name: Lint
+        run: python tools/lint.py
