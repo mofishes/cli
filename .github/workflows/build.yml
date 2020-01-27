@@ -189,4 +189,4 @@ jobs:
             message(FATAL_ERROR "Running tests failed!")
           endif()
       - name: Lint
-        run: python3 tools/lint.py
+        run: python tools/lint.py
